@@ -2,17 +2,13 @@ buildscript {
     ext.kotlin_version = '1.6.10'
     repositories {
         mavenLocal()
-        maven { url 'https://repo1.maven.org/maven2/' }
         google()
-        jcenter()
-        maven {url 'https://developer.huawei.com/repo/'}
-        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases' }
+        mavenCentral()
+        maven { url "https://jitpack.io" }
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0'
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath 'com.android.tools.build:gradle:4.2.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
     }
 
@@ -21,23 +17,11 @@ buildscript {
 allprojects {
     repositories {
         mavenLocal()
-        maven { url 'https://repo1.maven.org/maven2/' }
-        maven { url 'https://maven.aliyun.com/repository/public/' }
-        maven { url 'https://maven.aliyun.com/repository/spring/'}
-        maven { url 'https://maven.aliyun.com/repository/google/'}
-        maven {url 'https://developer.huawei.com/repo/'}
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases' }
         google()
-        jcenter()
-
         mavenCentral()
         maven { url "https://jitpack.io" }
-        maven { url 'https://dl.bintray.com/umsdk/release' }
-        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
 
-        flatDir {
-            dirs 'libs','../repositories'
-        }
+
     }
 }
 
